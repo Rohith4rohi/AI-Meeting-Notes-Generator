@@ -1,0 +1,27 @@
+node_modules/
+.env
+uploads/*.mp3
+uploads/*.wav
+uploads/*.m4a
+uploads/*.ogg
+uploads/*.webm
+frontend/build/
+*.log
+.DS_Store
+
+uploads/
+backend/uploads/
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+backend/.env
+frontend/.env
+
+# Build folders
+dist/
+build/
+
+# Logs
+npm-debug.log
