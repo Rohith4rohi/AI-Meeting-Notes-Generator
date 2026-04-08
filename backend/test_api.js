@@ -10,7 +10,7 @@ const req = http.request('http://localhost:5000/api/auth/login', {
       const parsed = JSON.parse(data);
       const t = parsed.token;
       
-      const r2 = http.request('http://localhost:5000/api/meetings', {
+      const r2 = http.request(`${BASE_URL}/api/meetings`, {
         method: 'GET', 
         headers: {Authorization: 'Bearer ' + t}
       }, (res2) => {
