@@ -75,6 +75,11 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Root route to prevent confusing 404s when opening the API directly
+app.get('/', (req, res) => {
+  res.json({ success: true, message: 'AI Meeting Notes API is running! Please use the frontend URL to access the application.' });
+});
+
 // 404 handler
 app.use('*', (req, res) => {
   res.status(404).json({ success: false, message: 'Route not found' });
